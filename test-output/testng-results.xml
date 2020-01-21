@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="55" passed="55">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="559884" started-at="2020-01-21T13:07:48 IST" finished-at="2020-01-21T13:17:08 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="559884" started-at="2020-01-21T13:07:48 IST" finished-at="2020-01-21T13:17:08 IST">
+      <class name="com.PigeonHole.RegressionScripts.PigeonHole_QA_Test">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="init" is-config="true" duration-ms="15898" started-at="2020-01-21T13:07:48 IST" finished-at="2020-01-21T13:08:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="clickAsiaLeadershipConference()[pri:1, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="clickAsiaLeadershipConference" duration-ms="7107" started-at="2020-01-21T13:08:04 IST" finished-at="2020-01-21T13:08:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAsiaLeadershipConference -->
+        <test-method status="PASS" signature="QuestionAndAnswer()[pri:2, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="QuestionAndAnswer" duration-ms="11270" started-at="2020-01-21T13:08:11 IST" finished-at="2020-01-21T13:08:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuestionAndAnswer -->
+        <test-method status="PASS" signature="AdminPanel()[pri:3, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="AdminPanel" duration-ms="10379" started-at="2020-01-21T13:08:22 IST" finished-at="2020-01-21T13:08:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AdminPanel -->
+        <test-method status="PASS" signature="ProjectorPanel()[pri:4, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="ProjectorPanel" duration-ms="10329" started-at="2020-01-21T13:08:33 IST" finished-at="2020-01-21T13:08:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProjectorPanel -->
+        <test-method status="PASS" signature="checkQuestionsFiltering()[pri:5, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="checkQuestionsFiltering" duration-ms="3639" started-at="2020-01-21T13:08:43 IST" finished-at="2020-01-21T13:08:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkQuestionsFiltering -->
+        <test-method status="PASS" signature="QuestionFiltering()[pri:6, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="QuestionFiltering" duration-ms="23560" started-at="2020-01-21T13:08:47 IST" finished-at="2020-01-21T13:09:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuestionFiltering -->
+        <test-method status="PASS" signature="shouldNotSeeTheQuestionInProjectorPanel()[pri:7, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="shouldNotSeeTheQuestionInProjectorPanel" duration-ms="2113" started-at="2020-01-21T13:09:10 IST" finished-at="2020-01-21T13:09:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNotSeeTheQuestionInProjectorPanel -->
+        <test-method status="PASS" signature="questionPendingApproval_GreenText()[pri:8, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="questionPendingApproval_GreenText" duration-ms="6535" started-at="2020-01-21T13:09:12 IST" finished-at="2020-01-21T13:09:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- questionPendingApproval_GreenText -->
+        <test-method status="PASS" signature="shouldSeeTheQuestionInAWA()[pri:9, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="shouldSeeTheQuestionInAWA" duration-ms="2062" started-at="2020-01-21T13:09:19 IST" finished-at="2020-01-21T13:09:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldSeeTheQuestionInAWA -->
+        <test-method status="PASS" signature="inProjectorPanelShouldSeeTheQuestionYouHaveJustApproved()[pri:10, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="inProjectorPanelShouldSeeTheQuestionYouHaveJustApproved" duration-ms="2105" started-at="2020-01-21T13:09:21 IST" finished-at="2020-01-21T13:09:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inProjectorPanelShouldSeeTheQuestionYouHaveJustApproved -->
+        <test-method status="PASS" signature="clickActive()[pri:11, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="clickActive" duration-ms="2141" started-at="2020-01-21T13:09:23 IST" finished-at="2020-01-21T13:09:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickActive -->
+        <test-method status="PASS" signature="shouldSeeTheQuestionInProjectorPanel()[pri:12, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="shouldSeeTheQuestionInProjectorPanel" duration-ms="2093" started-at="2020-01-21T13:09:25 IST" finished-at="2020-01-21T13:09:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldSeeTheQuestionInProjectorPanel -->
+        <test-method status="PASS" signature="clickAnswered()[pri:13, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="clickAnswered" duration-ms="2108" started-at="2020-01-21T13:09:27 IST" finished-at="2020-01-21T13:09:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAnswered -->
+        <test-method status="PASS" signature="seeAnswered()[pri:14, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="seeAnswered" duration-ms="2102" started-at="2020-01-21T13:09:29 IST" finished-at="2020-01-21T13:09:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seeAnswered -->
+        <test-method status="PASS" signature="shouldNotSeeThisQuestionAnymore()[pri:15, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="shouldNotSeeThisQuestionAnymore" duration-ms="2091" started-at="2020-01-21T13:09:32 IST" finished-at="2020-01-21T13:09:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNotSeeThisQuestionAnymore -->
+        <test-method status="PASS" signature="clickLoudSpeakerIcon()[pri:16, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="clickLoudSpeakerIcon" duration-ms="2124" started-at="2020-01-21T13:09:34 IST" finished-at="2020-01-21T13:09:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickLoudSpeakerIcon -->
+        <test-method status="PASS" signature="clickSaveForLater()[pri:17, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="clickSaveForLater" duration-ms="765" started-at="2020-01-21T13:09:36 IST" finished-at="2020-01-21T13:09:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSaveForLater -->
+        <test-method status="PASS" signature="clickSendAndConfirm()[pri:18, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="clickSendAndConfirm" duration-ms="2760" started-at="2020-01-21T13:09:37 IST" finished-at="2020-01-21T13:09:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSendAndConfirm -->
+        <test-method status="PASS" signature="clickClose()[pri:19, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="clickClose" duration-ms="2127" started-at="2020-01-21T13:09:39 IST" finished-at="2020-01-21T13:09:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickClose -->
+        <test-method status="PASS" signature="viewsAndClickAssertion()[pri:20, instance:com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e]" name="viewsAndClickAssertion" duration-ms="2925" started-at="2020-01-21T13:09:41 IST" finished-at="2020-01-21T13:09:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewsAndClickAssertion -->
+      </class> <!-- com.PigeonHole.RegressionScripts.PigeonHole_QA_Test -->
+      <class name="com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test">
+        <test-method status="PASS" signature="appLaunch()[pri:0, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="appLaunch" is-config="true" duration-ms="15007" started-at="2020-01-21T13:09:44 IST" finished-at="2020-01-21T13:09:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appLaunch -->
+        <test-method status="PASS" signature="Add_Pigeonhole()[pri:1, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="Add_Pigeonhole" duration-ms="366" started-at="2020-01-21T13:09:59 IST" finished-at="2020-01-21T13:10:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_Pigeonhole -->
+        <test-method status="PASS" signature="eventCreation()[pri:2, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="eventCreation" duration-ms="4342" started-at="2020-01-21T13:10:00 IST" finished-at="2020-01-21T13:10:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- eventCreation -->
+        <test-method status="PASS" signature="addSession()[pri:3, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="addSession" duration-ms="4548" started-at="2020-01-21T13:10:04 IST" finished-at="2020-01-21T13:10:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addSession -->
+        <test-method status="PASS" signature="multipleChoicePoll()[pri:4, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="multipleChoicePoll" duration-ms="1992" started-at="2020-01-21T13:10:09 IST" finished-at="2020-01-21T13:10:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- multipleChoicePoll -->
+        <test-method status="PASS" signature="numericScale()[pri:5, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="numericScale" duration-ms="3241" started-at="2020-01-21T13:10:11 IST" finished-at="2020-01-21T13:10:14 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- numericScale -->
+        <test-method status="PASS" signature="draggableScale()[pri:6, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="draggableScale" duration-ms="3213" started-at="2020-01-21T13:10:14 IST" finished-at="2020-01-21T13:10:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- draggableScale -->
+        <test-method status="PASS" signature="iconRating()[pri:7, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="iconRating" duration-ms="1701" started-at="2020-01-21T13:10:17 IST" finished-at="2020-01-21T13:10:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- iconRating -->
+        <test-method status="PASS" signature="attendeeCheckBox()[pri:8, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="attendeeCheckBox" duration-ms="410" started-at="2020-01-21T13:10:19 IST" finished-at="2020-01-21T13:10:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- attendeeCheckBox -->
+        <test-method status="PASS" signature="iconAndEventNameAssertion()[pri:9, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="iconAndEventNameAssertion" duration-ms="1636" started-at="2020-01-21T13:10:19 IST" finished-at="2020-01-21T13:10:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- iconAndEventNameAssertion -->
+        <test-method status="PASS" signature="editNextButtonClick()[pri:10, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="editNextButtonClick" duration-ms="821" started-at="2020-01-21T13:10:21 IST" finished-at="2020-01-21T13:10:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editNextButtonClick -->
+        <test-method status="PASS" signature="AudienceWebApp()[pri:11, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="AudienceWebApp" duration-ms="8334" started-at="2020-01-21T13:10:22 IST" finished-at="2020-01-21T13:10:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AudienceWebApp -->
+        <test-method status="PASS" signature="AdminPanel()[pri:12, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="AdminPanel" duration-ms="10390" started-at="2020-01-21T13:10:30 IST" finished-at="2020-01-21T13:10:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AdminPanel -->
+        <test-method status="PASS" signature="ProjectorPanel()[pri:13, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="ProjectorPanel" duration-ms="10355" started-at="2020-01-21T13:10:40 IST" finished-at="2020-01-21T13:10:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProjectorPanel -->
+        <test-method status="PASS" signature="castYourVote()[pri:14, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="castYourVote" duration-ms="4619" started-at="2020-01-21T13:10:51 IST" finished-at="2020-01-21T13:10:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- castYourVote -->
+        <test-method status="PASS" signature="votedOptionAndPercentageInAdminPanel()[pri:15, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="votedOptionAndPercentageInAdminPanel" duration-ms="4832" started-at="2020-01-21T13:10:55 IST" finished-at="2020-01-21T13:11:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- votedOptionAndPercentageInAdminPanel -->
+        <test-method status="PASS" signature="votedOptionAndPercentageInProjectorPanel()[pri:16, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="votedOptionAndPercentageInProjectorPanel" duration-ms="3383" started-at="2020-01-21T13:11:00 IST" finished-at="2020-01-21T13:11:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- votedOptionAndPercentageInProjectorPanel -->
+        <test-method status="PASS" signature="ThankYouForParticipating()[pri:17, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="ThankYouForParticipating" duration-ms="40522" started-at="2020-01-21T13:11:04 IST" finished-at="2020-01-21T13:11:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ThankYouForParticipating -->
+        <test-method status="PASS" signature="summaryOfThePoll()[pri:18, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="summaryOfThePoll" duration-ms="4237" started-at="2020-01-21T13:11:44 IST" finished-at="2020-01-21T13:11:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- summaryOfThePoll -->
+        <test-method status="PASS" signature="verifyFinalCount()[pri:19, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="verifyFinalCount" duration-ms="2148" started-at="2020-01-21T13:11:48 IST" finished-at="2020-01-21T13:11:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFinalCount -->
+        <test-method status="PASS" signature="quitDriversession()[pri:0, instance:com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2]" name="quitDriversession" is-config="true" duration-ms="748" started-at="2020-01-21T13:11:50 IST" finished-at="2020-01-21T13:11:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriversession -->
+      </class> <!-- com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test -->
+      <class name="com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions">
+        <test-method status="PASS" signature="appLaunch()[pri:0, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="appLaunch" is-config="true" duration-ms="15146" started-at="2020-01-21T13:11:51 IST" finished-at="2020-01-21T13:12:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appLaunch -->
+        <test-method status="PASS" signature="setUpEventModel()[pri:1, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="setUpEventModel" duration-ms="7508" started-at="2020-01-21T13:12:06 IST" finished-at="2020-01-21T13:12:14 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpEventModel -->
+        <test-method status="PASS" signature="createSessionWithPollQuestions()[pri:2, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="createSessionWithPollQuestions" duration-ms="68908" started-at="2020-01-21T13:12:14 IST" finished-at="2020-01-21T13:13:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createSessionWithPollQuestions -->
+        <test-method status="PASS" signature="startSession()[pri:3, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="startSession" duration-ms="20575" started-at="2020-01-21T13:13:23 IST" finished-at="2020-01-21T13:13:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method status="PASS" signature="selectAdminPanel()[pri:4, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="selectAdminPanel" duration-ms="22332" started-at="2020-01-21T13:13:43 IST" finished-at="2020-01-21T13:14:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectAdminPanel -->
+        <test-method status="PASS" signature="selectProjectorPanel()[pri:5, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="selectProjectorPanel" duration-ms="20403" started-at="2020-01-21T13:14:06 IST" finished-at="2020-01-21T13:14:26 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectProjectorPanel -->
+        <test-method status="PASS" signature="clickCastYourVote()[pri:6, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="clickCastYourVote" duration-ms="14323" started-at="2020-01-21T13:14:26 IST" finished-at="2020-01-21T13:14:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickCastYourVote -->
+        <test-method status="PASS" signature="seeOneParticipant()[pri:7, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="seeOneParticipant" duration-ms="6225" started-at="2020-01-21T13:14:40 IST" finished-at="2020-01-21T13:14:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seeOneParticipant -->
+        <test-method status="PASS" signature="shouldSeeCountdown()[pri:8, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="shouldSeeCountdown" duration-ms="8207" started-at="2020-01-21T13:14:47 IST" finished-at="2020-01-21T13:14:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldSeeCountdown -->
+        <test-method status="PASS" signature="imageToEnlarge()[pri:9, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="imageToEnlarge" duration-ms="8252" started-at="2020-01-21T13:14:55 IST" finished-at="2020-01-21T13:15:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- imageToEnlarge -->
+        <test-method status="PASS" signature="leaderboardScreen()[pri:10, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="leaderboardScreen" duration-ms="28315" started-at="2020-01-21T13:15:03 IST" finished-at="2020-01-21T13:15:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- leaderboardScreen -->
+        <test-method status="PASS" signature="checkTheScore()[pri:11, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="checkTheScore" duration-ms="4119" started-at="2020-01-21T13:15:31 IST" finished-at="2020-01-21T13:15:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTheScore -->
+        <test-method status="PASS" signature="quizPaused()[pri:12, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="quizPaused" duration-ms="2097" started-at="2020-01-21T13:15:36 IST" finished-at="2020-01-21T13:15:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quizPaused -->
+        <test-method status="PASS" signature="clickResumeButton()[pri:13, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="clickResumeButton" duration-ms="4124" started-at="2020-01-21T13:15:38 IST" finished-at="2020-01-21T13:15:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickResumeButton -->
+        <test-method status="PASS" signature="shouldSeeWellDoneAndSorryText()[pri:14, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="shouldSeeWellDoneAndSorryText" duration-ms="65151" started-at="2020-01-21T13:15:42 IST" finished-at="2020-01-21T13:16:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldSeeWellDoneAndSorryText -->
+        <test-method status="PASS" signature="seeScoreInAdminPanel()[pri:15, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="seeScoreInAdminPanel" duration-ms="9130" started-at="2020-01-21T13:16:47 IST" finished-at="2020-01-21T13:16:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seeScoreInAdminPanel -->
+        <test-method status="PASS" signature="seeScoreInProjectorPanel()[pri:16, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="seeScoreInProjectorPanel" duration-ms="11166" started-at="2020-01-21T13:16:56 IST" finished-at="2020-01-21T13:17:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seeScoreInProjectorPanel -->
+        <test-method status="PASS" signature="quitDriversession()[pri:0, instance:com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b]" name="quitDriversession" is-config="true" duration-ms="736" started-at="2020-01-21T13:17:07 IST" finished-at="2020-01-21T13:17:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriversession -->
+      </class> <!-- com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

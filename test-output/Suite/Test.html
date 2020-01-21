@@ -1,0 +1,354 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>55/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jan 21 13:07:48 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>559 seconds (559884 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.Add_Pigeonhole()'><b>Add_Pigeonhole</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>0</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.AdminPanel()'><b>AdminPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>10</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.AdminPanel()'><b>AdminPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>10</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.AudienceWebApp()'><b>AudienceWebApp</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>8</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.ProjectorPanel()'><b>ProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>10</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.ProjectorPanel()'><b>ProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>10</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.QuestionAndAnswer()'><b>QuestionAndAnswer</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>11</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.QuestionFiltering()'><b>QuestionFiltering</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>23</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.ThankYouForParticipating()'><b>ThankYouForParticipating</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>40</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.addSession()'><b>addSession</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>4</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.attendeeCheckBox()'><b>attendeeCheckBox</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>0</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.castYourVote()'><b>castYourVote</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>4</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.checkQuestionsFiltering()'><b>checkQuestionsFiltering</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>3</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.checkTheScore()'><b>checkTheScore</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>4</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickActive()'><b>clickActive</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickAnswered()'><b>clickAnswered</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickAsiaLeadershipConference()'><b>clickAsiaLeadershipConference</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>7</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.clickCastYourVote()'><b>clickCastYourVote</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>14</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickClose()'><b>clickClose</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickLoudSpeakerIcon()'><b>clickLoudSpeakerIcon</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.clickResumeButton()'><b>clickResumeButton</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>4</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickSaveForLater()'><b>clickSaveForLater</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>0</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickSendAndConfirm()'><b>clickSendAndConfirm</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.createSessionWithPollQuestions()'><b>createSessionWithPollQuestions</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>68</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.draggableScale()'><b>draggableScale</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>3</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.editNextButtonClick()'><b>editNextButtonClick</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>0</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.eventCreation()'><b>eventCreation</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>4</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.iconAndEventNameAssertion()'><b>iconAndEventNameAssertion</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>1</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.iconRating()'><b>iconRating</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>1</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.imageToEnlarge()'><b>imageToEnlarge</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>8</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.inProjectorPanelShouldSeeTheQuestionYouHaveJustApproved()'><b>inProjectorPanelShouldSeeTheQuestionYouHaveJustApproved</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.leaderboardScreen()'><b>leaderboardScreen</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>28</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.multipleChoicePoll()'><b>multipleChoicePoll</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>1</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.numericScale()'><b>numericScale</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>3</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.questionPendingApproval_GreenText()'><b>questionPendingApproval_GreenText</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>6</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.quizPaused()'><b>quizPaused</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.seeAnswered()'><b>seeAnswered</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.seeOneParticipant()'><b>seeOneParticipant</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>6</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.seeScoreInAdminPanel()'><b>seeScoreInAdminPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>9</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.seeScoreInProjectorPanel()'><b>seeScoreInProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>11</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.selectAdminPanel()'><b>selectAdminPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>22</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.selectProjectorPanel()'><b>selectProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>20</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.setUpEventModel()'><b>setUpEventModel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>7</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.shouldNotSeeTheQuestionInProjectorPanel()'><b>shouldNotSeeTheQuestionInProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.shouldNotSeeThisQuestionAnymore()'><b>shouldNotSeeThisQuestionAnymore</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.shouldSeeCountdown()'><b>shouldSeeCountdown</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>8</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.shouldSeeTheQuestionInAWA()'><b>shouldSeeTheQuestionInAWA</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.shouldSeeTheQuestionInProjectorPanel()'><b>shouldSeeTheQuestionInProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.shouldSeeWellDoneAndSorryText()'><b>shouldSeeWellDoneAndSorryText</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>65</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.startSession()'><b>startSession</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td></td>
+<td>20</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.summaryOfThePoll()'><b>summaryOfThePoll</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>4</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.verifyFinalCount()'><b>verifyFinalCount</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.viewsAndClickAssertion()'><b>viewsAndClickAssertion</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.votedOptionAndPercentageInAdminPanel()'><b>votedOptionAndPercentageInAdminPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>4</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.votedOptionAndPercentageInProjectorPanel()'><b>votedOptionAndPercentageInProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td></td>
+<td>3</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+</table><p>
+</body>
+</html>
