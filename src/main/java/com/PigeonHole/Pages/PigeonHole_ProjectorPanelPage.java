@@ -10,9 +10,10 @@ import com.PigeonHole.FunctionalLibrary.GenericMethods;
 
 public class PigeonHole_ProjectorPanelPage extends GenericMethods {
 
+	// Page Elements section
 	@FindBy(how = How.XPATH, using = "(//span[contains(text(),'Technology and Corporate Communications')])[2]")
 	public static WebElement eventName;
-
+	
 	@FindBy(how = How.CSS, using = ".qna-content")
 	public static WebElement questionName;
 
@@ -41,7 +42,7 @@ public class PigeonHole_ProjectorPanelPage extends GenericMethods {
 	public static WebElement verifyAverageScoreValue;
 
 	@FindBy(how = How.CSS, using = ".total-participant")
-	public static WebElement verifyTotalParticipants;
+	public static  WebElement verifyTotalParticipants;
 
 	@FindBy(how = How.XPATH, using = "(//div[@class=\"insight-data-count\"])[1]")
 	public static WebElement verifyQuestionsPolled;
@@ -65,11 +66,12 @@ public class PigeonHole_ProjectorPanelPage extends GenericMethods {
 	public static WebElement projectorPannelTotalScoreField;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='first-rank-bottom']//span[@class='value']")
-	public static WebElement projectorFinalScoreField;
+	public static  WebElement projectorFinalScoreField;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='first-rank-bottom']//span[@class='total']")
 	public static WebElement projectorFinalTotalScoreField;
 
+	// Page Commands section
 	public boolean validateSession(String sessionName) throws Throwable {
 		GenericMethods.sychronizationinterval();
 		return driver.findElement(By.xpath("//div[@class='sl-item-wrap']//span[text() ='" + sessionName + "']"))

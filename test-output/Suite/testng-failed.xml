@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test">
+        <methods>
+          <include name="Add_Pigeonhole"/>
+          <include name="appLaunch"/>
+          <include name="quitDriversession"/>
+        </methods>
+      </class> <!-- com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test -->
+      <class name="com.PigeonHole.RegressionScripts.PigeonHole_QA_Test">
+        <methods>
+          <include name="clickAsiaLeadershipConference"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.PigeonHole.RegressionScripts.PigeonHole_QA_Test -->
+      <class name="com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions">
+        <methods>
+          <include name="appLaunch"/>
+          <include name="setUpEventModel"/>
+          <include name="quitDriversession"/>
+        </methods>
+      </class> <!-- com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

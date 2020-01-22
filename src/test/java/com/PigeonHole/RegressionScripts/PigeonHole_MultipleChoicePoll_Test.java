@@ -1,15 +1,14 @@
 package com.PigeonHole.RegressionScripts;
 
-import org.openqa.selenium.support.PageFactory;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.Color;
+
 
 import com.PigeonHole.FunctionalLibrary.GenericMethods;
 import com.PigeonHole.Pages.PigeonHole_AdminPanelPage;
@@ -23,6 +22,7 @@ import com.github.javafaker.Faker;
 
 public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 
+	//Objects Declaration Section
 	public PigeonHole_DashboardPage dashboardPage;
 	public PigeonHole_RunEventsPage runEventsPage;
 	public PigeonHole_AudienceWebAppPage audienceWebAppPage;
@@ -30,17 +30,18 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 	public PigeonHole_ProjectorPanelPage projectorPanelPage;
 	public PigeonHole_AgendaPage agendaPage;
 	public PageElementsInitialization elementsInitialization;
-
 	Faker faker = new Faker();
-	// TestData
+	
+	//Test Input Data Section
 	String sessionName = faker.name().name();
 	String firstPollQuestion = faker.name().name();
 	String firstPollOptionOne = faker.name().name();
 	String firstPollOptionTwo = faker.name().name();
 	String firstPollOptionThree = faker.name().name();
 	String firstPollOptionFour = faker.name().name();
-
 	String obtainedVotePercentageForFirstPOll;
+	String obtainedVoteOptionForFirstPOll;
+	String obtainedIconRatingInAWAPage;
 	String url = "multiplechoice_poll_URL";
 	String expectedPollQuizColor = "#f07424";
 	int draggableScore = 55;
@@ -50,12 +51,12 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 	int voteAverage = 4;
 	int draggable_x_cordinate = 25;
 	int draggable_y_cordinate = 0;
-
 	int agenda_Page = 1;
 	int audienceWebApp_Page = 2;
 	int adminPanel_Page = 3;
 	int projectorPanel_Page = 4;
 
+	/* Launch the browser and navigate the Application */
 	@BeforeClass
 	public void appLaunch() {
 		GenericMethods.openBrowser();
@@ -79,13 +80,13 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 
 	// click Add Pigeonhole and select “Basic Pigeonhole”.
 	@Test(priority = 1)
-	public void Add_Pigeonhole() throws Exception {
+	public void addPigeonhole() throws Throwable {
 
-		GenericMethods.checkIfButtonExistsAndClick(dashboardPage.gotItButton);
+		GenericMethods.checkIfButtonExistsAndClick(PigeonHole_DashboardPage.gotItButton);
 
 		dashboardPage.clickOnAddPigeonHole();
 
-		GenericMethods.waitForElement(dashboardPage.basicPigeonHoleButton);
+		GenericMethods.waitForElement(PigeonHole_DashboardPage.basicPigeonHoleButton);
 
 		dashboardPage.clickOnBasicPigeonHole();
 	}
@@ -112,29 +113,27 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 	@Test(priority = 3)
 	public void addSession() throws Throwable {
 
-		GenericMethods.waitForElement(agendaPage.goToAgenda);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.goToAgenda);
 
 		agendaPage.clickGoToAgenda();
 
-		GenericMethods.checkIfButtonExistsAndClick(agendaPage.gotItButton);
+		GenericMethods.checkIfButtonExistsAndClick(PigeonHole_AgendaPage.gotItButton);
 
 		agendaPage.clickAddSession();
 	}
 
 	// select “poll: multiple choice” and fill in any session name.
+	// Add question, select “text/image” question type, add your own question and options. Click Save
 	@Test(priority = 4)
-	public void multipleChoicePoll() {
+	public void addTextOrImagePollQuestion() {
 
 		agendaPage.clickMultipleChoicePoll();
 
 		agendaPage.fillSessionName(sessionName);
 
-		// Add question, select “text/image” question type, add your own question
-		// and options. Click Save
-
 		agendaPage.clickAddQuestion();
 
-		GenericMethods.waitForElement(agendaPage.pollQuestionInput);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.pollQuestionInput);
 
 		agendaPage.fillPollQuestion(firstPollQuestion);
 
@@ -142,7 +141,7 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 
 		agendaPage.fillPollOptionTwo(firstPollOptionTwo);
 
-		GenericMethods.waitForElement(agendaPage.optionThree);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.optionThree);
 
 		agendaPage.fillPollOptionThree(firstPollOptionThree);
 
@@ -155,19 +154,19 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 	// Add question, select “numeric scale” question type, change lowest
 	// value to 0, add your own question. Click Save
 	@Test(priority = 5)
-	public void numericScale() throws Throwable {
+	public void addNumericScalePollQuestion() throws Throwable {
 
-		GenericMethods.waitForElement(agendaPage.addQuestionButton);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.addQuestionButton);
 
 		agendaPage.clickAddQuestion();
 
 		GenericMethods.sychronizationinterval();
 
-		GenericMethods.waitForElement(agendaPage.questionTypeDropDown);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.questionTypeDropDown);
 
 		agendaPage.clickQuestionType();
 
-		GenericMethods.waitForElement(agendaPage.numericDropDownOption);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.numericDropDownOption);
 
 		agendaPage.selectNumericScale();
 
@@ -184,17 +183,17 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 	// Add question, select “draggable scale” question type, change highest
 	// value to 100, add your own question. Click Save
 	@Test(priority = 6)
-	public void draggableScale() throws Throwable {
+	public void addDraggableScalePollQuestion() throws Throwable {
 
 		GenericMethods.sychronizationinterval();
 
 		agendaPage.clickAddQuestion();
 
-		GenericMethods.waitForElement(agendaPage.questionTypeDropDown);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.questionTypeDropDown);
 
 		agendaPage.clickQuestionType();
 
-		GenericMethods.waitForElement(agendaPage.numericDropDownOption);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.numericDropDownOption);
 
 		agendaPage.selectDraggable();
 
@@ -210,17 +209,17 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 	// Add question, select “ icon rating question type, change steps to 10,
 	// add your own question. Click Save
 	@Test(priority = 7)
-	public void iconRating() {
+	public void addIconRatingPollQuestion() {
 
-		GenericMethods.waitForElement(agendaPage.addQuestionButton);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.addQuestionButton);
 
 		agendaPage.clickAddQuestion();
 
-		GenericMethods.waitForElement(agendaPage.questionTypeDropDown);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.questionTypeDropDown);
 
 		agendaPage.clickQuestionType();
 
-		GenericMethods.waitForElement(agendaPage.iconRatingOption);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.iconRatingOption);
 
 		agendaPage.selectIconRating();
 
@@ -236,38 +235,28 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 	// check “attendee see the live results on the AWA after voting”
 	// click Add multiple choice.
 	@Test(priority = 8)
-	public void attendeeCheckBox() {
-
+	public void selectAttendeeCheckBox() throws Throwable {
+		GenericMethods.sychronizationinterval();
 		agendaPage.clickAWAcheckBox();
-
 		agendaPage.clickAddMultipleChoiceButton();
 	}
 
 	// check that the icon and event name is the same as your input.
 	@Test(priority = 9)
 	public void iconAndEventNameAssertion() {
-
-		GenericMethods.waitForElement(agendaPage.verifySessionName);
-
-		String obtainedSessionName = agendaPage.verifySessionName.getText();
-
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.verifySessionName);
+		String obtainedSessionName = PigeonHole_AgendaPage.verifySessionName.getText();
 		Assert.assertEquals(obtainedSessionName, sessionName, "Obtained sessionName did not match");
-
-		Assert.assertTrue(agendaPage.verifySessionIcon.isDisplayed(), "session icon element not visible.");
+		Assert.assertTrue(PigeonHole_AgendaPage.verifySessionIcon.isDisplayed(), "session icon element not visible.");
 	}
 
 	// click the dropdown arrow next to edit button, select start the session
 	@Test(priority = 10)
-	public void editNextButtonClick() {
-
+	public void startSession() {
 		agendaPage.clickEditNextArrowButton();
-
-		GenericMethods.waitForElement(agendaPage.editNextArrowStartButton);
-
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.editNextArrowStartButton);
 		agendaPage.clickEditNextArrowStartButton();
-
-		GenericMethods.waitForElement(agendaPage.popUpStartButton);
-
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.popUpStartButton);
 		agendaPage.clickPopUpStartButton();
 	}
 
@@ -277,15 +266,15 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 	// the session name shows up.
 
 	@Test(priority = 11)
-	public void AudienceWebApp() throws Throwable {
+	public void validateSessionInAudienceWebApp() throws Throwable {
 
 		GenericMethods.sychronizationinterval();
 
-		GenericMethods.waitForElement(agendaPage.runLinkButton);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.runLinkButton);
 
 		agendaPage.clickRunLinkButton();
 
-		GenericMethods.waitForElement(agendaPage.AWAbutton);
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.AWAbutton);
 
 		agendaPage.clickAudienceWebApp();
 
@@ -293,9 +282,9 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 
 		GenericMethods.sychronizationinterval();
 
-		GenericMethods.waitForElement(audienceWebAppPage.verifySessionName);
+		GenericMethods.waitForElement(PigeonHole_AudienceWebAppPage.verifySessionName);
 
-		String obtainedSessionNameInAwa = audienceWebAppPage.verifySessionName.getText();
+		String obtainedSessionNameInAwa = PigeonHole_AudienceWebAppPage.verifySessionName.getText();
 
 		Assert.assertEquals(obtainedSessionNameInAwa, sessionName, "Obtained sessionName did not match");
 	}
@@ -304,62 +293,41 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 	// In Admin Panel, check if the session name shows up and if the icon is in
 	// orange.
 	@Test(priority = 12)
-	public void AdminPanel() throws Throwable {
+	public void validateSessionInAdminPanel() throws Throwable {
 
 		GenericMethods.switchToNewWindow(agenda_Page);
-
 		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(agendaPage.runLinkButton);
-
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.runLinkButton);
 		agendaPage.clickRunLinkButton();
-
-		GenericMethods.waitForElement(agendaPage.adminpanelButton);
-
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.adminpanelButton);
 		agendaPage.clickAdminPanel();
-
 		GenericMethods.switchToNewWindow(adminPanel_Page);
-
 		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(adminPanelPage.verifySessionName);
-
-		String obtainedSessionNameInAdminPanel = adminPanelPage.verifySessionName.getText();
-
+		GenericMethods.waitForElement(PigeonHole_AdminPanelPage.verifySessionName);
+		String obtainedSessionNameInAdminPanel = PigeonHole_AdminPanelPage.verifySessionName.getText();
 		Assert.assertEquals(obtainedSessionNameInAdminPanel, sessionName, "Obtained sessionName did not match");
-
 		Assert.assertEquals(expectedPollQuizColor,
-				GenericMethods.getColourOfElement(adminPanelPage.verifySessionColor));
+				GenericMethods.getColourOfElement(PigeonHole_AdminPanelPage.verifySessionColor));
 	}
 
 	// Click on the “Run links” button then click Projector Panel.
 	// check if the session name shows up and if the icon is in orange.
 
 	@Test(priority = 13)
-	public void ProjectorPanel() throws Throwable {
+	public void validateSessionInProjectorPanel() throws Throwable {
 
 		GenericMethods.switchToNewWindow(agenda_Page);
-
 		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(agendaPage.runLinkButton);
-
+		GenericMethods.waitForElement(PigeonHole_AgendaPage.runLinkButton);
 		agendaPage.clickRunLinkButton();
-
 		agendaPage.clickProjectorPanel();
-
 		GenericMethods.switchToNewWindow(projectorPanel_Page);
-
 		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(projectorPanelPage.verifySessionName);
-
-		String obtainedSessionNameInProjectorPanel = projectorPanelPage.verifySessionName.getText();
-
+		GenericMethods.waitForElement(PigeonHole_ProjectorPanelPage.verifySessionName);
+		String obtainedSessionNameInProjectorPanel = PigeonHole_ProjectorPanelPage.verifySessionName.getText();
 		Assert.assertEquals(obtainedSessionNameInProjectorPanel, sessionName, "Obtained sessionName did not match");
-
 		Assert.assertEquals(expectedPollQuizColor,
-				GenericMethods.getColourOfElement(projectorPanelPage.verifySessionColor));
+				GenericMethods.getColourOfElement(PigeonHole_ProjectorPanelPage.verifySessionColor));
 	}
 
 	// Switch tab to awa, click “cast your vote” to see question one. Click on any
@@ -368,229 +336,145 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 	public void castYourVote() throws Throwable {
 
 		GenericMethods.switchToNewWindow(audienceWebApp_Page);
-
 		GenericMethods.sychronizationinterval();
-
 		audienceWebAppPage.clickCasteYourVote();
-
-		GenericMethods.waitForElement(audienceWebAppPage.verifyPollQuestion);
-
-		String obtainedQuestionInAWA = audienceWebAppPage.verifyPollQuestion.getText();
-
+		GenericMethods.waitForElement(PigeonHole_AudienceWebAppPage.verifyPollQuestion);
+		String obtainedQuestionInAWA = PigeonHole_AudienceWebAppPage.verifyPollQuestion.getText();
 		Assert.assertEquals(obtainedQuestionInAWA, firstPollQuestion, "Obtained poll question did not match");
-
-		GenericMethods.waitForElement(audienceWebAppPage.firstVoteOptionButton);
-
+		GenericMethods.waitForElement(PigeonHole_AudienceWebAppPage.firstVoteOptionButton);
 		audienceWebAppPage.clickVoteOption();
-
-		GenericMethods.waitForElement(audienceWebAppPage.verifyVoteOption);
-
-		String obtainedVoteOptionForFirstPOll = audienceWebAppPage.verifyVoteOption.getText();
-
-		GenericMethods.waitForElement(audienceWebAppPage.verifyVotePercentage);
-
-		obtainedVotePercentageForFirstPOll = audienceWebAppPage.verifyVotePercentage.getText();
+		GenericMethods.waitForElement(PigeonHole_AudienceWebAppPage.verifyVoteOption);
+		obtainedVoteOptionForFirstPOll = PigeonHole_AudienceWebAppPage.verifyVoteOption.getText();
+		GenericMethods.waitForElement(PigeonHole_AudienceWebAppPage.verifyVotePercentage);
+		obtainedVotePercentageForFirstPOll = PigeonHole_AudienceWebAppPage.verifyVotePercentage.getText();
 	}
 
 	// Switch tab to Admin panel, click on the session to enter. Check that the
 	// voted option and percentage is the same as you have voted.
 	@Test(priority = 15)
-	public void votedOptionAndPercentageInAdminPanel() throws Throwable {
+	public void VerifyVotedOptionAndPercentageInAdminPanel() throws Throwable {
 
 		GenericMethods.sychronizationinterval();
-
 		GenericMethods.switchToNewWindow(adminPanel_Page);
-
 		GenericMethods.sychronizationinterval();
-
 		adminPanelPage.clickSession();
-
-		GenericMethods.waitForElement(adminPanelPage.firstVoteOption);
-
-		String obtainedVoteOptionInAdminPanel = adminPanelPage.firstVoteOption.getText();
-
+		GenericMethods.waitForElement(PigeonHole_AdminPanelPage.firstVoteOption);
+		String obtainedVoteOptionInAdminPanel = PigeonHole_AdminPanelPage.firstVoteOption.getText();
 		Assert.assertEquals(obtainedVoteOptionInAdminPanel, firstPollOptionOne, "Obtained voteOption did not match");
-
-		GenericMethods.waitForElement(adminPanelPage.firstVotePercentage);
-
-		String obtainedVotePercentageInAdminPanel = adminPanelPage.firstVotePercentage.getText();
-
+		GenericMethods.waitForElement(PigeonHole_AdminPanelPage.firstVotePercentage);
+		Thread.sleep(3000);
+		String obtainedVotePercentageInAdminPanel = PigeonHole_AdminPanelPage.firstVotePercentage.getText();
 		obtainedVotePercentageInAdminPanel.contains(obtainedVotePercentageForFirstPOll);
 	}
 
 	// Switch tab to Projector panel, click on the session to enter. Check that the
 	// voted option and percentage is the same as you have voted.
 	@Test(priority = 16)
-	public void votedOptionAndPercentageInProjectorPanel() throws Throwable {
+	public void veifyVotedOptionAndPercentageInProjectorPanel() throws Throwable {
 
 		GenericMethods.switchToNewWindow(projectorPanel_Page);
-
 		GenericMethods.sychronizationinterval();
-
 		projectorPanelPage.clickSession();
-
-		GenericMethods.waitForElement(projectorPanelPage.firstVoteOption);
-
-		String obtainedVoteOptionInProjectorPanel = projectorPanelPage.firstVoteOption.getText();
-
+		GenericMethods.waitForElement(PigeonHole_ProjectorPanelPage.firstVoteOption);
+		String obtainedVoteOptionInProjectorPanel = PigeonHole_ProjectorPanelPage.firstVoteOption.getText();
 		Assert.assertEquals(obtainedVoteOptionInProjectorPanel, firstPollOptionOne,
-				"Obtained voteOption did not match");
-
-		GenericMethods.waitForElement(projectorPanelPage.firstVotePercentage);
-
-		String obtainedVotePercentageInProjectorPanel = projectorPanelPage.firstVotePercentage.getText();
-
+			"Obtained voteOption did not match");
+		GenericMethods.waitForElement(PigeonHole_ProjectorPanelPage.firstVotePercentage);
+		Thread.sleep(3000);
+		String obtainedVotePercentageInProjectorPanel = PigeonHole_ProjectorPanelPage.firstVotePercentage.getText();
 		obtainedVotePercentageInProjectorPanel.contains(obtainedVotePercentageForFirstPOll);
 	}
 
+	// Switch to AWA page , click numerical option
+	//verify Numerical scale poll question vote average in Admin panel and  Projector panel
+	@Test(priority = 17)
+	public void verifyNumericalPollQuestionVoteAverage() throws Throwable {
+
+		GenericMethods.switchToNewWindow(audienceWebApp_Page);
+		GenericMethods.sychronizationinterval();
+		audienceWebAppPage.clickNumericOption();
+		GenericMethods.sychronizationinterval();
+		GenericMethods.switchToNewWindow(adminPanel_Page);
+		GenericMethods.sychronizationinterval();
+		adminPanelPage.clickNext();
+		GenericMethods.waitForElement(PigeonHole_AdminPanelPage.verifyAverageValue);
+		String obtainedVoteAverageInAdminrPanel = PigeonHole_AdminPanelPage.verifyAverageValue.getText();
+		Assert.assertEquals(Integer.parseInt(obtainedVoteAverageInAdminrPanel), voteAverage,
+				"Obtained vote average did not match");
+		GenericMethods.switchToNewWindow(projectorPanel_Page);
+		GenericMethods.sychronizationinterval();
+		//GenericMethods.waitForElement(PigeonHole_ProjectorPanelPage.verifyAverageValue);
+		String obtainedVoteAverageInProjectorPanel = PigeonHole_ProjectorPanelPage.verifyAverageValue.getText();
+		Assert.assertEquals(Integer.parseInt(obtainedVoteAverageInProjectorPanel), voteAverage,
+				"Obtained vote average did not match");
+		
+	}
+	
+	// Switch to AWA page , drag to coordinates
+	//verify Draggable  poll question vote average in Admin panel and  Projector panel
+	@Test(priority = 18)
+	public void verifyDragagablePollQuestionVoteAverage() throws Throwable {
+
+		GenericMethods.switchToNewWindow(audienceWebApp_Page); // switching to audienceWebAppPage window
+		GenericMethods.sychronizationinterval();
+		audienceWebAppPage.clickVoteButton(draggable_x_cordinate,draggable_y_cordinate);
+		GenericMethods.sychronizationinterval();
+		GenericMethods.switchToNewWindow(adminPanel_Page);
+		GenericMethods.sychronizationinterval();
+		adminPanelPage.clickNext();
+		GenericMethods.sychronizationinterval();
+		GenericMethods.waitForElement(PigeonHole_AdminPanelPage.verifyAverageValue);
+		String obtainedVoteDraggableScoreInAdminrPanel = PigeonHole_AdminPanelPage.verifyAverageValue.getText();
+		Assert.assertEquals(Integer.parseInt(obtainedVoteDraggableScoreInAdminrPanel), draggableScore,
+				"Obtained Draggable average did not match");
+		GenericMethods.switchToNewWindow(projectorPanel_Page);
+		GenericMethods.sychronizationinterval();
+		GenericMethods.waitForElement(PigeonHole_ProjectorPanelPage.verifyAverageValue);
+		String obtainedVoteDraggableScoreInProjectorPanel = PigeonHole_ProjectorPanelPage.verifyAverageValue.getText();
+		Assert.assertEquals(Integer.parseInt(obtainedVoteDraggableScoreInProjectorPanel), draggableScore,
+				"Obtained Draggable average did not match");
+	}
+	
+	// Switch to AWA page click icon rating
+	//verify Icon Rating poll question vote average in Admin panel and  Projector panel
+	@Test(priority = 19)
+	public void verifyIconRattingPollQuestionVoteAverage() throws Throwable {
+
+		GenericMethods.switchToNewWindow(audienceWebApp_Page);
+		GenericMethods.sychronizationinterval();
+		GenericMethods.waitForElement(PigeonHole_AudienceWebAppPage.nextButton);
+		audienceWebAppPage.clickNext();
+		GenericMethods.sychronizationinterval();
+		audienceWebAppPage.clickIconRating();
+		 obtainedIconRatingInAWAPage = PigeonHole_AudienceWebAppPage.verifyIconRating.getText();
+		GenericMethods.switchToNewWindow(adminPanel_Page);
+		GenericMethods.sychronizationinterval();
+		adminPanelPage.clickNext();
+		GenericMethods.sychronizationinterval();
+		GenericMethods.waitForElement(PigeonHole_AdminPanelPage.verifyAverageScoreValue);
+		String obtainedVoteScoreInAdminrPanel = PigeonHole_AdminPanelPage.verifyAverageScoreValue.getText();
+		Assert.assertEquals(Integer.parseInt(obtainedVoteScoreInAdminrPanel), iconRating,
+				"Obtained Icon Rating did not match");
+		GenericMethods.switchToNewWindow(projectorPanel_Page);
+		GenericMethods.sychronizationinterval();
+		GenericMethods.waitForElement(PigeonHole_ProjectorPanelPage.verifyAverageScoreValue);
+		String obtainedVoteScoreInProjectorPanel = PigeonHole_ProjectorPanelPage.verifyAverageScoreValue.getText();
+		Assert.assertEquals(Integer.parseInt(obtainedVoteScoreInProjectorPanel), iconRating,
+				"Obtained Icon Rating average did not match");
+		
+	}
+	
 	// Until you have answered all the questions on AWA.
 	// Switch tab to awa, click next, you should see “Thank you for participating”
 	// and a Back button.
-	@Test(priority = 17)
-	public void ThankYouForParticipating() throws Throwable {
-
+	@Test(priority = 20)
+	public void verifyThankYouForParticipating() throws Throwable {
 		GenericMethods.switchToNewWindow(audienceWebApp_Page);
-
 		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(audienceWebAppPage.nextButton);
-
+		GenericMethods.waitForElement(PigeonHole_AudienceWebAppPage.nextButton);
 		audienceWebAppPage.clickNext();
-
 		GenericMethods.sychronizationinterval();
-
-		audienceWebAppPage.clickNumericOption();
-
-		GenericMethods.sychronizationinterval();
-
-		GenericMethods.switchToNewWindow(adminPanel_Page);
-
-		GenericMethods.sychronizationinterval();
-
-		adminPanelPage.clickNext();
-
-		GenericMethods.waitForElement(adminPanelPage.verifyAverageValue);
-
-		String obtainedVoteAverageInAdminrPanel = adminPanelPage.verifyAverageValue.getText();
-
-		Assert.assertEquals(Integer.parseInt(obtainedVoteAverageInAdminrPanel), voteAverage,
-				"Obtained vote average did not match");
-
-		GenericMethods.switchToNewWindow(projectorPanel_Page);
-
-		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(projectorPanelPage.verifyAverageValue);
-
-		String obtainedVoteAverageInProjectorPanel = projectorPanelPage.verifyAverageValue.getText();
-
-		Assert.assertEquals(Integer.parseInt(obtainedVoteAverageInProjectorPanel), voteAverage,
-				"Obtained vote average did not match");
-
-		GenericMethods.switchToNewWindow(audienceWebApp_Page); // switching to audienceWebAppPage window
-
-		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(audienceWebAppPage.nextButton);
-
-		audienceWebAppPage.clickNext();
-
-		WebElement slider = driver.findElement(By.cssSelector(".draggable-background"));
-
-		Actions action = new Actions(driver);
-
-		action.clickAndHold(slider);
-
-		GenericMethods.sychronizationinterval();
-
-		action.moveByOffset(draggable_x_cordinate, draggable_y_cordinate);
-
-		GenericMethods.sychronizationinterval();
-
-		action.release().build().perform();
-
-		audienceWebAppPage.clickVoteButton();
-
-		GenericMethods.sychronizationinterval();
-
-		GenericMethods.switchToNewWindow(adminPanel_Page);
-
-		GenericMethods.sychronizationinterval();
-
-		adminPanelPage.clickNext();
-
-		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(adminPanelPage.verifyAverageValue);
-
-		String obtainedVoteDraggableScoreInAdminrPanel = adminPanelPage.verifyAverageValue.getText();
-
-		Assert.assertEquals(Integer.parseInt(obtainedVoteDraggableScoreInAdminrPanel), draggableScore,
-				"Obtained Draggable average did not match");
-
-		GenericMethods.switchToNewWindow(projectorPanel_Page);
-
-		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(projectorPanelPage.verifyAverageValue);
-
-		String obtainedVoteDraggableScoreInProjectorPanel = projectorPanelPage.verifyAverageValue.getText();
-
-		Assert.assertEquals(Integer.parseInt(obtainedVoteDraggableScoreInProjectorPanel), draggableScore,
-				"Obtained Draggable average did not match");
-
-		GenericMethods.switchToNewWindow(audienceWebApp_Page);
-
-		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(audienceWebAppPage.nextButton);
-
-		audienceWebAppPage.clickNext();
-
-		GenericMethods.sychronizationinterval();
-
-		audienceWebAppPage.clickIconRating();
-
-		String obtainedIconRatingInAWAPage = audienceWebAppPage.verifyIconRating.getText();
-
-		GenericMethods.switchToNewWindow(adminPanel_Page);
-
-		GenericMethods.sychronizationinterval();
-
-		adminPanelPage.clickNext();
-
-		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(adminPanelPage.verifyAverageScoreValue);
-
-		String obtainedVoteScoreInAdminrPanel = adminPanelPage.verifyAverageScoreValue.getText();
-
-		Assert.assertEquals(Integer.parseInt(obtainedVoteScoreInAdminrPanel), iconRating,
-				"Obtained Icon Rating did not match");
-
-		GenericMethods.switchToNewWindow(projectorPanel_Page);
-
-		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(projectorPanelPage.verifyAverageScoreValue);
-
-		String obtainedVoteScoreInProjectorPanel = projectorPanelPage.verifyAverageScoreValue.getText();
-
-		Assert.assertEquals(Integer.parseInt(obtainedVoteScoreInProjectorPanel), iconRating,
-				"Obtained Icon Rating average did not match");
-
-		GenericMethods.switchToNewWindow(audienceWebApp_Page);
-
-		GenericMethods.sychronizationinterval();
-
-		GenericMethods.waitForElement(audienceWebAppPage.nextButton);
-
-		audienceWebAppPage.clickNext();
-
-		GenericMethods.sychronizationinterval();
-
-		String obtainedThankYouText = audienceWebAppPage.thankYouText.getText();
-
+		String obtainedThankYouText = PigeonHole_AudienceWebAppPage.thankYouText.getText();
 		Assert.assertEquals(obtainedThankYouText, "Thank you for participating!",
 				"Obtained ThankYou Message did not match");
 	}
@@ -598,60 +482,44 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 	// Switch to Admin Panel, click next,
 	// you should see the summary of the poll: 1 Total Participants, 4 Questions
 	// Polled, 4 Total Votes and a “Back to question 1” button.
-	@Test(priority = 18)
-	public void summaryOfThePoll() throws Throwable {
+	@Test(priority = 21)
+	public void checkSummaryOfThePoll() throws Throwable {
 
 		audienceWebAppPage.clickBack();
-
 		GenericMethods.switchToNewWindow(adminPanel_Page);
-
 		GenericMethods.sychronizationinterval();
-
 		adminPanelPage.clickNext();
-
 		GenericMethods.sychronizationinterval();
-
-		String verifyTotalParticipantsCount = adminPanelPage.verifyTotalParticipants.getText();
-
+		String verifyTotalParticipantsCount = PigeonHole_AdminPanelPage.verifyTotalParticipants.getText();
 		Assert.assertEquals(Integer.parseInt(verifyTotalParticipantsCount), participantsCount,
 				"Obtained Total Participants Count did not match");
-
-		String verifyTotalQuestionsPollCount = adminPanelPage.verifyQuestionsPolled.getText();
-
+		String verifyTotalQuestionsPollCount = PigeonHole_AdminPanelPage.verifyQuestionsPolled.getText();
 		Assert.assertEquals(Integer.parseInt(verifyTotalQuestionsPollCount), pollsCount,
-				"Obtained Total Questions Poll Count did not match");
-
-		String verifyTotalVotesCount = adminPanelPage.verifyTotalVotes.getText();
-
+			"Obtained Total Questions Poll Count did not match");
+		String verifyTotalVotesCount = PigeonHole_AdminPanelPage.verifyTotalVotes.getText();
 		Assert.assertEquals(Integer.parseInt(verifyTotalVotesCount), pollsCount,
 				"Obtained Total Votes Count did not match");
 	}
 
 	// Switch to Projector Panel, without clicking, you should see the summary of
 	// the poll: 1 Total Participants, 4 Questions Polled and 4 Total Votes.
-	@Test(priority = 19)
+	@Test(priority = 22)
 	public void verifyFinalCount() throws Throwable {
 
 		GenericMethods.switchToNewWindow(projectorPanel_Page);
-
 		GenericMethods.sychronizationinterval();
-
-		String verifyTotalParticipantsCountInProjectorPanel = projectorPanelPage.verifyTotalParticipants.getText();
-
+		String verifyTotalParticipantsCountInProjectorPanel = PigeonHole_ProjectorPanelPage.verifyTotalParticipants.getText();
 		Assert.assertEquals(Integer.parseInt(verifyTotalParticipantsCountInProjectorPanel), participantsCount,
 				"Obtained Total Participants Count did not match");
-
-		String verifyTotalQuestionsPollCountInProjectorPanel = projectorPanelPage.verifyQuestionsPolled.getText();
-
+		String verifyTotalQuestionsPollCountInProjectorPanel = PigeonHole_ProjectorPanelPage.verifyQuestionsPolled.getText();
 		Assert.assertEquals(Integer.parseInt(verifyTotalQuestionsPollCountInProjectorPanel), pollsCount,
 				"Obtained Total Questions Poll Count did not match");
-
-		String verifyTotalVotesCountInProjectorPanel = projectorPanelPage.verifyTotalVotes.getText();
-
+		String verifyTotalVotesCountInProjectorPanel = PigeonHole_ProjectorPanelPage.verifyTotalVotes.getText();
 		Assert.assertEquals(Integer.parseInt(verifyTotalVotesCountInProjectorPanel), pollsCount,
 				"Obtained Total Votes Count did not match");
 	}
 
+	/*Method for quit driver session */
 	@AfterClass
 	public void quitDriversession() {
 		GenericMethods.CloseDriverSession();

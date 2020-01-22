@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>55/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jan 21 13:07:48 IST 2020</td>
+<td>Started on:</td><td>Wed Jan 22 10:47:30 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>559 seconds (559884 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5977 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,442 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.init()'><b>init</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;OJAS00217&apos;, ip: &apos;192.168.3.176&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0051A113+1548563]
+	Ordinal0 [0x0049DDA1+1039777]
+	Ordinal0 [0x0041E485+517253]
+	Ordinal0 [0x003AFD34+64820]
+	Ordinal0 [0x003AC61E+50718]
+	Ordinal0 [0x003CB797+178071]
+	Ordinal0 [0x003CB59D+177565]
+	Ordinal0 [0x003C95FB+169467]
+	Ordinal0 [0x003B160A+71178]
+	Ordinal0 [0x003B2690+75408]
+	Ordinal0 [0x003B2629+75305]
+	Ordinal0 [0x004B71B7+1143223]
+	GetHandleVerifier [0x005B2B46+507814]
+	GetHandleVerifier [0x005B2864+507076]
+	GetHandleVerifier [0x005B9F47+537511]
+	GetHandleVerifier [0x005B3402+510050]
+	Ordinal0 [0x004AF29C+1110684]
+	Ordinal0 [0x004B938B+1151883]
+	Ordinal0 [0x004B94F3+1152243]
+	Ordinal0 [0x004B83F5+1147893]
+	BaseThreadInitThunk [0x76C56359+25]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B44+180]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.PigeonHole.FunctionalLibrary.GenericMethods.openBrowser(GenericMethods.java:32)
+	at com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.init(PigeonHole_QA_Test.java:52)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1844648639", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1844648639'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;OJAS00217&apos;, ip: &apos;192.168.3.176&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0051A113+1548563]
+	Ordinal0 [0x0049DDA1+1039777]
+	Ordinal0 [0x0041E485+517253]
+	Ordinal0 [0x003AFD34+64820]
+	Ordinal0 [0x003AC61E+50718]
+	Ordinal0 [0x003CB797+178071]
+	Ordinal0 [0x003CB59D+177565]
+	Ordinal0 [0x003C95FB+169467]
+	Ordinal0 [0x003B160A+71178]
+	Ordinal0 [0x003B2690+75408]
+	Ordinal0 [0x003B2629+75305]
+	Ordinal0 [0x004B71B7+1143223]
+	GetHandleVerifier [0x005B2B46+507814]
+	GetHandleVerifier [0x005B2864+507076]
+	GetHandleVerifier [0x005B9F47+537511]
+	GetHandleVerifier [0x005B3402+510050]
+	Ordinal0 [0x004AF29C+1110684]
+	Ordinal0 [0x004B938B+1151883]
+	Ordinal0 [0x004B94F3+1152243]
+	Ordinal0 [0x004B83F5+1147893]
+	BaseThreadInitThunk [0x76C56359+25]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B44+180]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.PigeonHole.FunctionalLibrary.GenericMethods.openBrowser(GenericMethods.java:32)
+	at com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.init(PigeonHole_QA_Test.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@75f32817</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.appLaunch()'><b>appLaunch</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;OJAS00217&apos;, ip: &apos;192.168.3.176&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0051A113+1548563]
+	Ordinal0 [0x0049DDA1+1039777]
+	Ordinal0 [0x0041E485+517253]
+	Ordinal0 [0x003AFD34+64820]
+	Ordinal0 [0x003AC61E+50718]
+	Ordinal0 [0x003CB797+178071]
+	Ordinal0 [0x003CB59D+177565]
+	Ordinal0 [0x003C95FB+169467]
+	Ordinal0 [0x003B160A+71178]
+	Ordinal0 [0x003B2690+75408]
+	Ordinal0 [0x003B2629+75305]
+	Ordinal0 [0x004B71B7+1143223]
+	GetHandleVerifier [0x005B2B46+507814]
+	GetHandleVerifier [0x005B2864+507076]
+	GetHandleVerifier [0x005B9F47+537511]
+	GetHandleVerifier [0x005B3402+510050]
+	Ordinal0 [0x004AF29C+1110684]
+	Ordinal0 [0x004B938B+1151883]
+	Ordinal0 [0x004B94F3+1152243]
+	Ordinal0 [0x004B83F5+1147893]
+	BaseThreadInitThunk [0x76C56359+25]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B44+180]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.PigeonHole.FunctionalLibrary.GenericMethods.openBrowser(GenericMethods.java:32)
+	at com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.appLaunch(PigeonHole_MultipleChoicePoll_Test.java:61)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace370723210", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace370723210'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;OJAS00217&apos;, ip: &apos;192.168.3.176&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0051A113+1548563]
+	Ordinal0 [0x0049DDA1+1039777]
+	Ordinal0 [0x0041E485+517253]
+	Ordinal0 [0x003AFD34+64820]
+	Ordinal0 [0x003AC61E+50718]
+	Ordinal0 [0x003CB797+178071]
+	Ordinal0 [0x003CB59D+177565]
+	Ordinal0 [0x003C95FB+169467]
+	Ordinal0 [0x003B160A+71178]
+	Ordinal0 [0x003B2690+75408]
+	Ordinal0 [0x003B2629+75305]
+	Ordinal0 [0x004B71B7+1143223]
+	GetHandleVerifier [0x005B2B46+507814]
+	GetHandleVerifier [0x005B2864+507076]
+	GetHandleVerifier [0x005B9F47+537511]
+	GetHandleVerifier [0x005B3402+510050]
+	Ordinal0 [0x004AF29C+1110684]
+	Ordinal0 [0x004B938B+1151883]
+	Ordinal0 [0x004B94F3+1152243]
+	Ordinal0 [0x004B83F5+1147893]
+	BaseThreadInitThunk [0x76C56359+25]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B44+180]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.PigeonHole.FunctionalLibrary.GenericMethods.openBrowser(GenericMethods.java:32)
+	at com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.appLaunch(PigeonHole_MultipleChoicePoll_Test.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>2</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@23a78c77</td></tr>
+<tr>
+<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.appLaunch()'><b>appLaunch</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;OJAS00217&apos;, ip: &apos;192.168.3.176&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0051A113+1548563]
+	Ordinal0 [0x0049DDA1+1039777]
+	Ordinal0 [0x0041E485+517253]
+	Ordinal0 [0x003AFD34+64820]
+	Ordinal0 [0x003AC61E+50718]
+	Ordinal0 [0x003CB797+178071]
+	Ordinal0 [0x003CB59D+177565]
+	Ordinal0 [0x003C95FB+169467]
+	Ordinal0 [0x003B160A+71178]
+	Ordinal0 [0x003B2690+75408]
+	Ordinal0 [0x003B2629+75305]
+	Ordinal0 [0x004B71B7+1143223]
+	GetHandleVerifier [0x005B2B46+507814]
+	GetHandleVerifier [0x005B2864+507076]
+	GetHandleVerifier [0x005B9F47+537511]
+	GetHandleVerifier [0x005B3402+510050]
+	Ordinal0 [0x004AF29C+1110684]
+	Ordinal0 [0x004B938B+1151883]
+	Ordinal0 [0x004B94F3+1152243]
+	Ordinal0 [0x004B83F5+1147893]
+	BaseThreadInitThunk [0x76C56359+25]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B44+180]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.PigeonHole.FunctionalLibrary.GenericMethods.openBrowser(GenericMethods.java:32)
+	at com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.appLaunch(PigeonHole_CreateQuizSessions.java:61)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace613231852", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace613231852'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;OJAS00217&apos;, ip: &apos;192.168.3.176&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0051A113+1548563]
+	Ordinal0 [0x0049DDA1+1039777]
+	Ordinal0 [0x0041E485+517253]
+	Ordinal0 [0x003AFD34+64820]
+	Ordinal0 [0x003AC61E+50718]
+	Ordinal0 [0x003CB797+178071]
+	Ordinal0 [0x003CB59D+177565]
+	Ordinal0 [0x003C95FB+169467]
+	Ordinal0 [0x003B160A+71178]
+	Ordinal0 [0x003B2690+75408]
+	Ordinal0 [0x003B2629+75305]
+	Ordinal0 [0x004B71B7+1143223]
+	GetHandleVerifier [0x005B2B46+507814]
+	GetHandleVerifier [0x005B2864+507076]
+	GetHandleVerifier [0x005B9F47+537511]
+	GetHandleVerifier [0x005B3402+510050]
+	Ordinal0 [0x004AF29C+1110684]
+	Ordinal0 [0x004B938B+1151883]
+	Ordinal0 [0x004B94F3+1152243]
+	Ordinal0 [0x004B83F5+1147893]
+	BaseThreadInitThunk [0x76C56359+25]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B44+180]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.PigeonHole.FunctionalLibrary.GenericMethods.openBrowser(GenericMethods.java:32)
+	at com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.appLaunch(PigeonHole_CreateQuizSessions.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@4119346d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,279 +510,430 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.Add_Pigeonhole()'><b>Add_Pigeonhole</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;OJAS00217&apos;, ip: &apos;192.168.3.176&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0051A113+1548563]
+	Ordinal0 [0x0049DDA1+1039777]
+	Ordinal0 [0x0041E485+517253]
+	Ordinal0 [0x003AFD34+64820]
+	Ordinal0 [0x003AC61E+50718]
+	Ordinal0 [0x003CB797+178071]
+	Ordinal0 [0x003CB59D+177565]
+	Ordinal0 [0x003C95FB+169467]
+	Ordinal0 [0x003B160A+71178]
+	Ordinal0 [0x003B2690+75408]
+	Ordinal0 [0x003B2629+75305]
+	Ordinal0 [0x004B71B7+1143223]
+	GetHandleVerifier [0x005B2B46+507814]
+	GetHandleVerifier [0x005B2864+507076]
+	GetHandleVerifier [0x005B9F47+537511]
+	GetHandleVerifier [0x005B3402+510050]
+	Ordinal0 [0x004AF29C+1110684]
+	Ordinal0 [0x004B938B+1151883]
+	Ordinal0 [0x004B94F3+1152243]
+	Ordinal0 [0x004B83F5+1147893]
+	BaseThreadInitThunk [0x76C56359+25]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B44+180]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.PigeonHole.FunctionalLibrary.GenericMethods.openBrowser(GenericMethods.java:32)
+	at com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.appLaunch(PigeonHole_MultipleChoicePoll_Test.java:61)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace95884778", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace95884778'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;OJAS00217&apos;, ip: &apos;192.168.3.176&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0051A113+1548563]
+	Ordinal0 [0x0049DDA1+1039777]
+	Ordinal0 [0x0041E485+517253]
+	Ordinal0 [0x003AFD34+64820]
+	Ordinal0 [0x003AC61E+50718]
+	Ordinal0 [0x003CB797+178071]
+	Ordinal0 [0x003CB59D+177565]
+	Ordinal0 [0x003C95FB+169467]
+	Ordinal0 [0x003B160A+71178]
+	Ordinal0 [0x003B2690+75408]
+	Ordinal0 [0x003B2629+75305]
+	Ordinal0 [0x004B71B7+1143223]
+	GetHandleVerifier [0x005B2B46+507814]
+	GetHandleVerifier [0x005B2864+507076]
+	GetHandleVerifier [0x005B9F47+537511]
+	GetHandleVerifier [0x005B3402+510050]
+	Ordinal0 [0x004AF29C+1110684]
+	Ordinal0 [0x004B938B+1151883]
+	Ordinal0 [0x004B94F3+1152243]
+	Ordinal0 [0x004B83F5+1147893]
+	BaseThreadInitThunk [0x76C56359+25]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B44+180]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.PigeonHole.FunctionalLibrary.GenericMethods.openBrowser(GenericMethods.java:32)
+	at com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.appLaunch(PigeonHole_MultipleChoicePoll_Test.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
 <td>0</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.AdminPanel()'><b>AdminPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>10</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.AdminPanel()'><b>AdminPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>10</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.AudienceWebApp()'><b>AudienceWebApp</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>8</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.ProjectorPanel()'><b>ProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>10</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.ProjectorPanel()'><b>ProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>10</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.QuestionAndAnswer()'><b>QuestionAndAnswer</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>11</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.QuestionFiltering()'><b>QuestionFiltering</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>23</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.ThankYouForParticipating()'><b>ThankYouForParticipating</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>40</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.addSession()'><b>addSession</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>4</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.attendeeCheckBox()'><b>attendeeCheckBox</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>0</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.castYourVote()'><b>castYourVote</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>4</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.checkQuestionsFiltering()'><b>checkQuestionsFiltering</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>3</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.checkTheScore()'><b>checkTheScore</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>4</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickActive()'><b>clickActive</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickAnswered()'><b>clickAnswered</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@23a78c77</td></tr>
 <tr>
 <td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickAsiaLeadershipConference()'><b>clickAsiaLeadershipConference</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>7</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.clickCastYourVote()'><b>clickCastYourVote</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>14</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickClose()'><b>clickClose</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickLoudSpeakerIcon()'><b>clickLoudSpeakerIcon</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.clickResumeButton()'><b>clickResumeButton</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>4</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickSaveForLater()'><b>clickSaveForLater</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;OJAS00217&apos;, ip: &apos;192.168.3.176&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0051A113+1548563]
+	Ordinal0 [0x0049DDA1+1039777]
+	Ordinal0 [0x0041E485+517253]
+	Ordinal0 [0x003AFD34+64820]
+	Ordinal0 [0x003AC61E+50718]
+	Ordinal0 [0x003CB797+178071]
+	Ordinal0 [0x003CB59D+177565]
+	Ordinal0 [0x003C95FB+169467]
+	Ordinal0 [0x003B160A+71178]
+	Ordinal0 [0x003B2690+75408]
+	Ordinal0 [0x003B2629+75305]
+	Ordinal0 [0x004B71B7+1143223]
+	GetHandleVerifier [0x005B2B46+507814]
+	GetHandleVerifier [0x005B2864+507076]
+	GetHandleVerifier [0x005B9F47+537511]
+	GetHandleVerifier [0x005B3402+510050]
+	Ordinal0 [0x004AF29C+1110684]
+	Ordinal0 [0x004B938B+1151883]
+	Ordinal0 [0x004B94F3+1152243]
+	Ordinal0 [0x004B83F5+1147893]
+	BaseThreadInitThunk [0x76C56359+25]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B44+180]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.PigeonHole.FunctionalLibrary.GenericMethods.openBrowser(GenericMethods.java:32)
+	at com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.init(PigeonHole_QA_Test.java:52)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2101977504", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2101977504'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;OJAS00217&apos;, ip: &apos;192.168.3.176&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0051A113+1548563]
+	Ordinal0 [0x0049DDA1+1039777]
+	Ordinal0 [0x0041E485+517253]
+	Ordinal0 [0x003AFD34+64820]
+	Ordinal0 [0x003AC61E+50718]
+	Ordinal0 [0x003CB797+178071]
+	Ordinal0 [0x003CB59D+177565]
+	Ordinal0 [0x003C95FB+169467]
+	Ordinal0 [0x003B160A+71178]
+	Ordinal0 [0x003B2690+75408]
+	Ordinal0 [0x003B2629+75305]
+	Ordinal0 [0x004B71B7+1143223]
+	GetHandleVerifier [0x005B2B46+507814]
+	GetHandleVerifier [0x005B2864+507076]
+	GetHandleVerifier [0x005B9F47+537511]
+	GetHandleVerifier [0x005B3402+510050]
+	Ordinal0 [0x004AF29C+1110684]
+	Ordinal0 [0x004B938B+1151883]
+	Ordinal0 [0x004B94F3+1152243]
+	Ordinal0 [0x004B83F5+1147893]
+	BaseThreadInitThunk [0x76C56359+25]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B44+180]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.PigeonHole.FunctionalLibrary.GenericMethods.openBrowser(GenericMethods.java:32)
+	at com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.init(PigeonHole_QA_Test.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
 <td>0</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.clickSendAndConfirm()'><b>clickSendAndConfirm</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.createSessionWithPollQuestions()'><b>createSessionWithPollQuestions</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>68</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.draggableScale()'><b>draggableScale</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>3</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.editNextButtonClick()'><b>editNextButtonClick</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>0</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.eventCreation()'><b>eventCreation</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>4</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.iconAndEventNameAssertion()'><b>iconAndEventNameAssertion</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>1</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.iconRating()'><b>iconRating</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>1</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.imageToEnlarge()'><b>imageToEnlarge</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>8</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.inProjectorPanelShouldSeeTheQuestionYouHaveJustApproved()'><b>inProjectorPanelShouldSeeTheQuestionYouHaveJustApproved</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.leaderboardScreen()'><b>leaderboardScreen</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>28</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.multipleChoicePoll()'><b>multipleChoicePoll</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>1</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.numericScale()'><b>numericScale</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>3</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.questionPendingApproval_GreenText()'><b>questionPendingApproval_GreenText</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>6</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.quizPaused()'><b>quizPaused</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.seeAnswered()'><b>seeAnswered</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.seeOneParticipant()'><b>seeOneParticipant</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>6</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.seeScoreInAdminPanel()'><b>seeScoreInAdminPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>9</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.seeScoreInProjectorPanel()'><b>seeScoreInProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>11</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.selectAdminPanel()'><b>selectAdminPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>22</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.selectProjectorPanel()'><b>selectProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>20</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@75f32817</td></tr>
 <tr>
 <td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.setUpEventModel()'><b>setUpEventModel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>7</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.shouldNotSeeTheQuestionInProjectorPanel()'><b>shouldNotSeeTheQuestionInProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.shouldNotSeeThisQuestionAnymore()'><b>shouldNotSeeThisQuestionAnymore</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.shouldSeeCountdown()'><b>shouldSeeCountdown</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>8</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.shouldSeeTheQuestionInAWA()'><b>shouldSeeTheQuestionInAWA</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.shouldSeeTheQuestionInProjectorPanel()'><b>shouldSeeTheQuestionInProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.shouldSeeWellDoneAndSorryText()'><b>shouldSeeWellDoneAndSorryText</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>65</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.startSession()'><b>startSession</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions</td>
-<td></td>
-<td>20</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@1a0ffb9b</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.summaryOfThePoll()'><b>summaryOfThePoll</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>4</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.verifyFinalCount()'><b>verifyFinalCount</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_QA_Test.viewsAndClickAssertion()'><b>viewsAndClickAssertion</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_QA_Test</td>
-<td></td>
-<td>2</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_QA_Test@116fc29e</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.votedOptionAndPercentageInAdminPanel()'><b>votedOptionAndPercentageInAdminPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>4</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
-<tr>
-<td title='com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test.votedOptionAndPercentageInProjectorPanel()'><b>votedOptionAndPercentageInProjectorPanel</b><br>Test class: com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test</td>
-<td></td>
-<td>3</td>
-<td>com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test@2e426dd2</td></tr>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;OJAS00217&apos;, ip: &apos;192.168.3.176&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0051A113+1548563]
+	Ordinal0 [0x0049DDA1+1039777]
+	Ordinal0 [0x0041E485+517253]
+	Ordinal0 [0x003AFD34+64820]
+	Ordinal0 [0x003AC61E+50718]
+	Ordinal0 [0x003CB797+178071]
+	Ordinal0 [0x003CB59D+177565]
+	Ordinal0 [0x003C95FB+169467]
+	Ordinal0 [0x003B160A+71178]
+	Ordinal0 [0x003B2690+75408]
+	Ordinal0 [0x003B2629+75305]
+	Ordinal0 [0x004B71B7+1143223]
+	GetHandleVerifier [0x005B2B46+507814]
+	GetHandleVerifier [0x005B2864+507076]
+	GetHandleVerifier [0x005B9F47+537511]
+	GetHandleVerifier [0x005B3402+510050]
+	Ordinal0 [0x004AF29C+1110684]
+	Ordinal0 [0x004B938B+1151883]
+	Ordinal0 [0x004B94F3+1152243]
+	Ordinal0 [0x004B83F5+1147893]
+	BaseThreadInitThunk [0x76C56359+25]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B44+180]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.PigeonHole.FunctionalLibrary.GenericMethods.openBrowser(GenericMethods.java:32)
+	at com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.appLaunch(PigeonHole_CreateQuizSessions.java:61)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1568128654", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1568128654'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;OJAS00217&apos;, ip: &apos;192.168.3.176&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0051A113+1548563]
+	Ordinal0 [0x0049DDA1+1039777]
+	Ordinal0 [0x0041E485+517253]
+	Ordinal0 [0x003AFD34+64820]
+	Ordinal0 [0x003AC61E+50718]
+	Ordinal0 [0x003CB797+178071]
+	Ordinal0 [0x003CB59D+177565]
+	Ordinal0 [0x003C95FB+169467]
+	Ordinal0 [0x003B160A+71178]
+	Ordinal0 [0x003B2690+75408]
+	Ordinal0 [0x003B2629+75305]
+	Ordinal0 [0x004B71B7+1143223]
+	GetHandleVerifier [0x005B2B46+507814]
+	GetHandleVerifier [0x005B2864+507076]
+	GetHandleVerifier [0x005B9F47+537511]
+	GetHandleVerifier [0x005B3402+510050]
+	Ordinal0 [0x004AF29C+1110684]
+	Ordinal0 [0x004B938B+1151883]
+	Ordinal0 [0x004B94F3+1152243]
+	Ordinal0 [0x004B83F5+1147893]
+	BaseThreadInitThunk [0x76C56359+25]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x77CC7B44+180]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.PigeonHole.FunctionalLibrary.GenericMethods.openBrowser(GenericMethods.java:32)
+	at com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions.appLaunch(PigeonHole_CreateQuizSessions.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions@4119346d</td></tr>
 </table><p>
 </body>
 </html>

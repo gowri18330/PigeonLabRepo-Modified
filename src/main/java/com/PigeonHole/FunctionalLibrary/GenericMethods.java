@@ -21,6 +21,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.PigeonHole.Utilities.ConstantUtils;
 import com.PigeonHole.Utilities.PropertyUtil;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class GenericMethods {
 	public static WebDriver driver;
 
@@ -28,13 +30,13 @@ public class GenericMethods {
 	public static WebDriver openBrowser() {
 
 		if (PropertyUtil.getValueFromKey("browser").equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", ConstantUtils.chromePath);
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (PropertyUtil.getValueFromKey("browser").equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", ConstantUtils.firefoxPath);
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else if (PropertyUtil.getValueFromKey("browser").equalsIgnoreCase("IE")) {
-			System.setProperty("webdriver.ie.driver", ConstantUtils.internetExplorerPath);
+			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
 		}
 		return driver;
@@ -44,7 +46,6 @@ public class GenericMethods {
 	public static void navigateAppUrl(String url) {
 		driver.get(PropertyUtil.getValueFromKey(url));
 		driver.manage().window().maximize();
-		// return driver;
 	}
 
 	/* closing WebDriver Session */
@@ -91,11 +92,13 @@ public class GenericMethods {
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
+	// Reusable method for wait and click
 	public static void waitForElementClickable(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Integer.parseInt(ConstantUtils.waitTime));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
+	// Method for switch window
 	public static void switchToNewWindow(int windowNumber) {
 		Set<String> s = driver.getWindowHandles();
 		Iterator<String> ite = s.iterator();
@@ -103,19 +106,21 @@ public class GenericMethods {
 		while (ite.hasNext() && i < 10) { // replace i < 10 value with s.size()
 			String popupHandle = ite.next().toString();
 			driver.switchTo().window(popupHandle);
-		//	System.out.println("Window title is : " + driver.getTitle());
 			if (i == windowNumber)
 				break;
 			i++;
 		}
 	}
 
-	public static void checkIfButtonExistsAndClick(WebElement element) {
+	// Method for check the button and click on it
+	public static void checkIfButtonExistsAndClick(WebElement element) throws Throwable {
 		if (element.isDisplayed()) {
+			GenericMethods.sychronizationinterval();
 			element.click();
 		}
 	}
 
+	// Method for verify element is present in application
 	public static boolean checkIfElementExists(WebElement element) {
 		if (element.isDisplayed()) {
 			return true;
@@ -123,11 +128,13 @@ public class GenericMethods {
 		return false;
 	}
 	
+	// Method for Synchronization
 	public static void sychronizationinterval() throws Throwable
 	{
 		Thread.sleep(ConstantUtils.sychronizationTime);
 	}
 	
+	// Method for get colour of the element
 	public static String getColourOfElement(WebElement element) throws Throwable
 	{
 		GenericMethods.sychronizationinterval();
@@ -140,5 +147,33 @@ public class GenericMethods {
       int hexValue3 = Integer.parseInt(hexValues[2]);
       String actualColorValue = String.format("#%02x%02x%02x", hexValue1, hexValue2, hexValue3);
       return actualColorValue;
+	}
+	
+	// Method for handle multiple windows
+	public static void switchToWindow(String WindowName) {
+		Set<String> s = driver.getWindowHandles();
+		Iterator<String> ite = s.iterator();
+		int i = 1;
+		while (ite.hasNext() && i <= s.size()) { 
+			String popupHandle = ite.next().toString();
+			if(((i ==1) && WindowName.equalsIgnoreCase("dashboard")))
+			{
+				driver.switchTo().window(popupHandle);
+				break;
+			}
+			else if (((i ==2) && WindowName.equalsIgnoreCase("audiencepage"))) {
+				driver.switchTo().window(popupHandle);
+				break;
+			}
+			else if (((i ==3) && WindowName.equalsIgnoreCase("adminPannel"))) {
+				driver.switchTo().window(popupHandle);
+				break;
+			}
+			else if (((i ==4) && WindowName.equalsIgnoreCase("projectorPannel"))) {
+				driver.switchTo().window(popupHandle);
+				break;
+			}
+			i++;
+		}
 	}
 }

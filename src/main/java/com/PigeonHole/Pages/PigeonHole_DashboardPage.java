@@ -10,6 +10,7 @@ import com.PigeonHole.FunctionalLibrary.GenericMethods;
 
 public class PigeonHole_DashboardPage {
 
+	// Page Elements section
 	@FindBy(how = How.CSS, using = ".pigeonhole-listview__list-link-classy")
 	public static WebElement eventName;
 
@@ -29,7 +30,7 @@ public class PigeonHole_DashboardPage {
 	public static WebElement randomPassCodeLink;
 
 	@FindBy(how = How.CSS, using = ".modal-affirmative-button ")
-	public static WebElement continueButton;
+	public static  WebElement continueButton;
 
 	@FindBy(how = How.XPATH, using = "//div[@class=\"modal-footer\"]//button[@type=\"button\"]")
 	public static WebElement goToAgendaButton;
@@ -50,10 +51,10 @@ public class PigeonHole_DashboardPage {
 	public static WebElement addQuestionButton;
 
 	@FindBy(how = How.XPATH, using = "//input[@name='question']")
-	public static WebElement pullQuestionField;
+	public static  WebElement pullQuestionField;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='modal-poll-type-region']//div[@class='input-group__addon input-uploader-area hide-if-archived remove-image']//input")
-	public static WebElement imageIcon;
+	public static  WebElement imageIcon;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='col-md-12 validation-error-host']//input[@id='poll_option_-1']")
 	public static WebElement answerOptionFirstField;
@@ -92,7 +93,7 @@ public class PigeonHole_DashboardPage {
 	public static WebElement optionSecondField;
 
 	@FindBy(how = How.XPATH, using = "//button[text() ='Save']")
-	public static WebElement saveButtonTwo;
+	public static  WebElement saveButtonTwo;
 
 	@FindBy(how = How.XPATH, using = "//div[@data-id='-2']//div[@class='poll-option-left ']")
 	public static WebElement markSecondField;
@@ -130,6 +131,7 @@ public class PigeonHole_DashboardPage {
 	@FindBy(how = How.XPATH, using = "//a[text() ='Projector Panel']")
 	public static WebElement projectorPannelLink;
 
+	// Page Commands section
 	public void clickOnGotItButton() {
 		gotItButton.click();
 	}
@@ -146,6 +148,7 @@ public class PigeonHole_DashboardPage {
 		GenericMethods.sychronizationinterval();
 		continueButton.click();
 		GenericMethods.sychronizationinterval();
+		Thread.sleep(2000);
 		goToAgendaButton.click();
 		GenericMethods.sychronizationinterval();
 		GenericMethods.waitForElementClickable(conformationButton);
@@ -164,6 +167,7 @@ public class PigeonHole_DashboardPage {
 		GenericMethods.sychronizationinterval();
 		pullQuestionField.sendKeys(question);
 		GenericMethods.sychronizationinterval();
+		Thread.sleep(3000);
 		imageIcon.sendKeys(System.getProperty("user.dir") + "/FruitesImages/fruits.jpg");
 		GenericMethods.sychronizationinterval();
 		answerOptionFirstField.sendKeys(firstAnswer);

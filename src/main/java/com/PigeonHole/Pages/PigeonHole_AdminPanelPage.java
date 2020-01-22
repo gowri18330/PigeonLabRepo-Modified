@@ -10,11 +10,13 @@ import com.PigeonHole.FunctionalLibrary.GenericMethods;
 
 public class PigeonHole_AdminPanelPage extends GenericMethods {
 
+	// Page Elements section
+	
 	@FindBy(how = How.XPATH, using = "(//span[contains(text(),\"Technology and Corporate Communications\")])[4]")
 	public static WebElement eventName;
 
 	@FindBy(how = How.CSS, using = ".content")
-	public static WebElement questionName;
+	public static  WebElement questionName;
 
 	@FindBy(how = How.XPATH, using = "(//div[@class=\"icon-cross sidebar-icon-cross\"])[5]")
 	public static WebElement crossIcon;
@@ -29,7 +31,7 @@ public class PigeonHole_AdminPanelPage extends GenericMethods {
 	public static WebElement allowButton;
 
 	@FindBy(how = How.CSS, using = "a[data-routename=\"question_allowed\"]")
-	public static WebElement allowedButton;
+	public static  WebElement allowedButton;
 
 	@FindBy(how = How.XPATH, using = "(//div[@class=\"content\"])[1]")
 	public static WebElement secondQuestion;
@@ -116,33 +118,27 @@ public class PigeonHole_AdminPanelPage extends GenericMethods {
 	public static WebElement startQuizeTimer;
 
 	@FindBy(how = How.XPATH, using = "//button[text()='Pause']")
-	@CacheLookup
 	public static WebElement pauseButton;
 
 	@FindBy(how = How.XPATH, using = "//button[text()='Resume']")
-	@CacheLookup
 	public static WebElement resumeButton;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='header-wrapper']//span[@class='question-index']")
-	@CacheLookup
 	public static WebElement leaderboardQuestionCount;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='score']//span[@class='value']")
-	@CacheLookup
 	public static WebElement adminPannelScoreValueField;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='score']//span[@class='total']")
-	@CacheLookup
 	public static WebElement adminPannelTotalScoreField;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='first-rank-bottom']//span[@class='value']")
-	@CacheLookup
 	public static WebElement adminFinalScoreField;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='first-rank-bottom']//span[@class='total']")
-	@CacheLookup
 	public static WebElement adminFinalTotalScoreField;
 
+	// Page Commands section
 	public boolean validateSession(String sessionName) throws Throwable {
 		GenericMethods.sychronizationinterval();
 		return driver.findElement(By.xpath("//div[@class='sl-item-wrap']//span[text() ='" + sessionName + "']"))

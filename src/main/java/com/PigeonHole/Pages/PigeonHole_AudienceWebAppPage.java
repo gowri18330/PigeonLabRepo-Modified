@@ -11,11 +11,15 @@ import com.PigeonHole.FunctionalLibrary.GenericMethods;
 
 public class PigeonHole_AudienceWebAppPage extends GenericMethods {
 
+	// Page Elements section
 	@FindBy(how = How.XPATH, using = "(//h2[text()=\"Technology and Corporate Communications\"]/..//a[contains(text(),\" Enter this Q&A\")])[1]")
 	public static WebElement enterThisQA_Button;
 
 	@FindBy(how = How.CSS, using = ".question-input")
 	public static WebElement questionInput;
+
+	@FindBy(how = How.CSS, using = ".question-input")
+	public static WebElement questionInputTwo;
 
 	@FindBy(how = How.CSS, using = ".question-input-btn")
 	public static WebElement askButton;
@@ -61,7 +65,7 @@ public class PigeonHole_AudienceWebAppPage extends GenericMethods {
 
 	@FindBy(how = How.XPATH, using = "(//div[@class='poll-option-item-percentage'])[1]")
 	public static WebElement verifyVotePercentage;
-
+	
 	@FindBy(how = How.CSS, using = ".next-button")
 	public static WebElement nextButton;
 
@@ -107,6 +111,7 @@ public class PigeonHole_AudienceWebAppPage extends GenericMethods {
 	@FindBy(how = How.XPATH, using = "//div[@class='ranking-summary']//div[text() ='1/2']")
 	public static WebElement finalScoreField;
 
+	// Page Commands section
 	public boolean validateSession(String sessionName) {
 		return driver
 				.findElement(By.xpath("//div[@class='sessionlist-item-outer']//div//h2[text() ='" + sessionName + "']"))
@@ -169,11 +174,23 @@ public class PigeonHole_AudienceWebAppPage extends GenericMethods {
 		nextButton.click();
 	}
 
-	public void clickNumericOption() {
+	public void clickNumericOption() throws Throwable {
+		GenericMethods.waitForElement(PigeonHole_AudienceWebAppPage.nextButton);
+		clickNext();
+		GenericMethods.sychronizationinterval();
 		numericInputOptionFourButton.click();
 	}
 
-	public void clickVoteButton() {
+	public void clickVoteButton(int x_cordinate, int y_cordinate) throws Throwable {
+		clickNext();
+		WebElement slider = driver.findElement(By.cssSelector(".draggable-background"));
+		Actions action = new Actions(driver);
+		action.clickAndHold(slider);
+		GenericMethods.sychronizationinterval();
+		action.moveByOffset(x_cordinate, y_cordinate);
+		GenericMethods.sychronizationinterval();
+		action.release().build().perform();
+		GenericMethods.sychronizationinterval();
 		confirmVoteButton.click();
 	}
 
@@ -188,4 +205,6 @@ public class PigeonHole_AudienceWebAppPage extends GenericMethods {
 	public void clickSkip() {
 		skipButton.click();
 	}
+	
+	
 }

@@ -1,11 +1,13 @@
 package com.PigeonHole.Pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class PigeonHole_RunEventsPage {
 
+	// Page Elements section
 	@FindBy(how = How.CSS, using = ".quick-run-button")
 	public static WebElement runLinksButton;
 
@@ -19,11 +21,12 @@ public class PigeonHole_RunEventsPage {
 	public static WebElement projectorPanelButton;
 
 	@FindBy(how = How.CSS, using = "a[href$=\"agenda\"]:nth-child(1)")
-	public static WebElement agendaButton;
+	public static  WebElement agendaButton;
 
 	@FindBy(how = How.CSS, using = ".confirmation-btn")
 	public static WebElement gotItButton;
 
+	// Page Commands section
 	public void clickAudienceWebApp() {
 		AWA_Link.click();
 	}

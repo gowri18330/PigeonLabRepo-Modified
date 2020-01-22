@@ -9,6 +9,7 @@ import com.PigeonHole.FunctionalLibrary.GenericMethods;
 
 public class PigeonHole_AgendaPage extends GenericMethods {
 
+	// Page Elements section
 	@FindBy(how = How.XPATH, using = "//strong[contains(text(),\"Technology and Corporate Communications\")]/../../..//a")
 	public static WebElement eventEditButton;
 
@@ -105,6 +106,7 @@ public class PigeonHole_AgendaPage extends GenericMethods {
 	@FindBy(how = How.XPATH, using = "//a[text()=\"Projector Panel\"]")
 	public static WebElement projectorPanelButton;
 
+	// Page Commands section
 	public void clickEventEdit() {
 		eventEditButton.click();
 	}
