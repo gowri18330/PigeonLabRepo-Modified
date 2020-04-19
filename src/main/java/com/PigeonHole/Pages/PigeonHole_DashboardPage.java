@@ -136,7 +136,8 @@ public class PigeonHole_DashboardPage {
 		gotItButton.click();
 	}
 
-	public void clickBasicPigeonhole() {
+	public void clickBasicPigeonhole() throws Throwable {
+		Thread.sleep(5000);
 		clickOnGotItButton();
 		clickOnAddPigeonHole();
 		basicPigeonHoleButton.click();
@@ -168,7 +169,7 @@ public class PigeonHole_DashboardPage {
 		pullQuestionField.sendKeys(question);
 		GenericMethods.sychronizationinterval();
 		Thread.sleep(3000);
-		imageIcon.sendKeys(System.getProperty("user.dir") + "/FruitesImages/fruits.jpg");
+		imageIcon.sendKeys(System.getProperty("user.dir") + "\\FruitesImages\\fruits.jpg");
 		GenericMethods.sychronizationinterval();
 		answerOptionFirstField.sendKeys(firstAnswer);
 		GenericMethods.sychronizationinterval();
@@ -187,17 +188,17 @@ public class PigeonHole_DashboardPage {
 		GenericMethods.sychronizationinterval();
 		optionFirstField.sendKeys(firstAnswer);
 		GenericMethods.sychronizationinterval();
-		firstOptionImage.sendKeys(System.getProperty("user.dir") + "/FruitesImages/animated-orange.gif");
+		firstOptionImage.sendKeys(System.getProperty("user.dir") + "\\FruitesImages\\animated-orange.gif");
 		GenericMethods.sychronizationinterval();
 		optionSecondField.sendKeys(secondAnswer);
 		GenericMethods.sychronizationinterval();
-		secondOptionImage.sendKeys(System.getProperty("user.dir") + "/FruitesImages/guava.jpg");
+		secondOptionImage.sendKeys(System.getProperty("user.dir") + "\\FruitesImages\\guava.jpg");
 		Thread.sleep(8000);// wait required for uploading the image icon
 		markSecondField.click();
 		GenericMethods.sychronizationinterval();
 		answerOptionThirdField.sendKeys(thirdAnswer);
 		Thread.sleep(6000);
-		thirdOptionImage.sendKeys(System.getProperty("user.dir") + "/FruitesImages/apple.png");
+		thirdOptionImage.sendKeys(System.getProperty("user.dir") + "\\FruitesImages\\apple.png");
 		Thread.sleep(8000);// wait required for uploading the image icon
 		saveButtonTwo.click();
 		GenericMethods.sychronizationinterval();

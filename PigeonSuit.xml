@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PigeonHole">
+<listeners>
+         <listener class-name="com.PigeonHole.Reports.ExtentReport"/>
+         <listener class-name="com.PigeonHole.Reports.Listeners"/>
+ </listeners>
+       <test name="CreateQuizSessions_ChromeTest">
+        <parameter name="browser" value="Chrome" />
+         <classes>
+       <class name="com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions_Test"/>
+       </classes>
+      </test><!-- Test -->
+      
+      <test name="CreateQuizSessions_FirefoxTest">
+        <parameter name="browser" value="Firefox" />
+         <classes>
+       <class name="com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions_Test"/>
+       </classes>
+      </test><!-- Test -->
+</suite> <!-- Suite -->
