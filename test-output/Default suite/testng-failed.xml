@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test">
+      <class name="com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions_Test">
         <methods>
-          <include name="checkSummaryOfThePoll"/>
+          <include name="ValidateSessionInAWSPage"/>
+          <include name="ValidateSessionInAdminPannel"/>
+          <include name="ValidateSessionInProjectorPannel"/>
           <include name="appLaunch"/>
-          <include name="quitDriversession"/>
         </methods>
-      </class> <!-- com.PigeonHole.RegressionScripts.PigeonHole_MultipleChoicePoll_Test -->
+      </class> <!-- com.PigeonHole.RegressionScripts.PigeonHole_CreateQuizSessions_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

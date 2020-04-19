@@ -4,6 +4,7 @@ package com.PigeonHole.RegressionScripts;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -58,8 +59,10 @@ public class PigeonHole_MultipleChoicePoll_Test extends GenericMethods {
 
 	/* Launch the browser and navigate the Application */
 	@BeforeClass
-	public void appLaunch() {
-		GenericMethods.openBrowser();
+	@Parameters("browser")
+	public void appLaunch(String browser) {
+		
+		GenericMethods.openBrowser(browser);
 		GenericMethods.navigateAppUrl(url);
 
 		dashboardPage = new PigeonHole_DashboardPage();

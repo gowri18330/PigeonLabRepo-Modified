@@ -3,11 +3,14 @@ package com.PigeonHole.FunctionalLibrary;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +18,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -27,23 +31,33 @@ public class GenericMethods {
 	public static WebDriver driver;
 
 	/* Launches Required Browser */
-	public static WebDriver openBrowser() {
+	public static WebDriver openBrowser(String browser) {
 
-		if (PropertyUtil.getValueFromKey("browser").equalsIgnoreCase("chrome")) {
+		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		} else if (PropertyUtil.getValueFromKey("browser").equalsIgnoreCase("firefox")) {
+		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-		} else if (PropertyUtil.getValueFromKey("browser").equalsIgnoreCase("IE")) {
+		} else if (browser.equalsIgnoreCase("IE")) {
 			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
 		}
 		return driver;
 	}
+	
+	public static boolean isAlertPresent() {
+        try {
+          driver.switchTo().alert();
+          return true;
+        } catch (NoAlertPresentException e) {
+          return false;
+        }
+      }
 
 	/* Navigate Application Url */
 	public static void navigateAppUrl(String url) {
+		driver.manage().deleteAllCookies();
 		driver.get(PropertyUtil.getValueFromKey(url));
 		driver.manage().window().maximize();
 	}
@@ -105,6 +119,7 @@ public class GenericMethods {
 		int i = 1;
 		while (ite.hasNext() && i < 10) { // replace i < 10 value with s.size()
 			String popupHandle = ite.next().toString();
+			System.out.println(i + " " + driver.getTitle());
 			driver.switchTo().window(popupHandle);
 			if (i == windowNumber)
 				break;
@@ -138,42 +153,104 @@ public class GenericMethods {
 	public static String getColourOfElement(WebElement element) throws Throwable
 	{
 		GenericMethods.sychronizationinterval();
-		String colorString1 = element.getCssValue("color").trim();
-      String[] hexValues = colorString1.replace("rgba(", "").replace(")", "").split(",");
-      int hexValue1 = Integer.parseInt(hexValues[0]);
-      hexValues[1] = hexValues[1].trim();
-      int hexValue2 = Integer.parseInt(hexValues[1]);
-      hexValues[2] = hexValues[2].trim();
-      int hexValue3 = Integer.parseInt(hexValues[2]);
-      String actualColorValue = String.format("#%02x%02x%02x", hexValue1, hexValue2, hexValue3);
+		String colorString1 = element.getCssValue("color");
+		System.out.println("actual first result  "+colorString1);
+		String actualColorValue =Color.fromString(colorString1).asHex();
+		System.out.println(actualColorValue);
       return actualColorValue;
 	}
 	
 	// Method for handle multiple windows
-	public static void switchToWindow(String WindowName) {
+	public static void switchToWindow(String WindowName ,String browser) {
+		
+		
+		if(browser.equalsIgnoreCase("chrome")) {
 		Set<String> s = driver.getWindowHandles();
 		Iterator<String> ite = s.iterator();
 		int i = 1;
-		while (ite.hasNext() && i <= s.size()) { 
+		while (ite.hasNext() && i <= s.size()) {
 			String popupHandle = ite.next().toString();
+			
 			if(((i ==1) && WindowName.equalsIgnoreCase("dashboard")))
-			{
+			{			
 				driver.switchTo().window(popupHandle);
+				System.out.println(i + " " + driver.getTitle());
 				break;
 			}
 			else if (((i ==2) && WindowName.equalsIgnoreCase("audiencepage"))) {
 				driver.switchTo().window(popupHandle);
+				System.out.println(i + " " + driver.getTitle());
 				break;
 			}
 			else if (((i ==3) && WindowName.equalsIgnoreCase("adminPannel"))) {
 				driver.switchTo().window(popupHandle);
+				System.out.println(i + " " + driver.getTitle());
 				break;
 			}
 			else if (((i ==4) && WindowName.equalsIgnoreCase("projectorPannel"))) {
 				driver.switchTo().window(popupHandle);
+				System.out.println(i + " " + driver.getTitle());
 				break;
 			}
 			i++;
 		}
 	}
+		else if (browser.equalsIgnoreCase("firefox")) {
+			
+			Set<String> s = driver.getWindowHandles();
+			Iterator<String> ite = s.iterator();
+			int i = 1;
+			while (ite.hasNext() && i <= s.size()) {
+				String popupHandle = ite.next().toString();
+				
+				if(((i ==1) && WindowName.equalsIgnoreCase("dashboard")))
+				{			
+					driver.switchTo().window(popupHandle);
+					System.out.println(i + " " + driver.getTitle());
+					break;
+				}
+				else if (((i ==2) && WindowName.equalsIgnoreCase("projectorPannel"))) { 
+					driver.switchTo().window(popupHandle);
+					System.out.println(i + " " + driver.getTitle());
+					break;
+				}
+				else if (((i ==3) && WindowName.equalsIgnoreCase("adminPannel"))) {  
+					driver.switchTo().window(popupHandle);
+					System.out.println(i + " " + driver.getTitle());
+					break;
+				}
+				else if (((i ==4) && WindowName.equalsIgnoreCase("audiencepage"))) {
+					driver.switchTo().window(popupHandle);
+					System.out.println(i + " " + driver.getTitle());
+					break;
+				}
+				i++;
+		}
+	}
+	}
+	
+	public static void SwitchToAnotherWindow(int window_number){
+
+	     List<String> windowlist = null;
+
+	    Set<String> windows = driver.getWindowHandles();
+
+	    windowlist = new ArrayList<String>(windows);
+
+	   String currentWindow = driver.getWindowHandle();
+
+	    System.out.println("size" +windowlist.size());
+	    
+	   for (int i=0; i<windowlist.size(); i++)
+	   {
+		   System.out.println(i +" is " +windowlist.get(i));
+		   if(window_number == i)
+		   {
+			   System.out.println("selected window  "+windowlist.get(i));
+			   driver.switchTo().window(windowlist.get(i));
+			   break;
+		   }
+	   }
+	}
+	
 }

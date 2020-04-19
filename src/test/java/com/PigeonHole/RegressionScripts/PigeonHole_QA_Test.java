@@ -1,8 +1,9 @@
-package com.PigeonHole.RegressionScripts;
+   package com.PigeonHole.RegressionScripts;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.PigeonHole.FunctionalLibrary.GenericMethods;
 import com.PigeonHole.Pages.PigeonHole_AdminPanelPage;
@@ -39,8 +40,10 @@ public class PigeonHole_QA_Test extends GenericMethods {
 
 	/* Launch the browser and navigate the Application */
 	@BeforeClass
-	public void init() {
-		GenericMethods.openBrowser();
+	@Parameters("browser")
+	public void appLaunch(String browser) {
+		
+		GenericMethods.openBrowser(browser);
 		GenericMethods.navigateAppUrl(url);
 
 		dashboardPage = new PigeonHole_DashboardPage();
@@ -179,7 +182,7 @@ public class PigeonHole_QA_Test extends GenericMethods {
 		GenericMethods.switchToNewWindow(projectorPanel_Page);
 		GenericMethods.sychronizationinterval();
 		String questionTwoINprojectorPanel = PigeonHole_ProjectorPanelPage.questionName.getText();
-		Assert.assertFalse(questionTwoINprojectorPanel.contains(questionTwo), "Text not found!");
+		Assert.assertFalse(questionTwoINprojectorPanel.contains(questionTwo), "Text not found!");   
 	}
 
 	
